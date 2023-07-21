@@ -34,12 +34,16 @@ nav a {
   transition: 0.5s;
 }
 
+nav a.active {
+  color: #222327;
+}
+
 #indicator {
   position: absolute;
   height: 75px;
   width: 100%;
   background: #29fd53;
-  z-index: 3;
+  z-index: 1;
   transition: 0.5s;
   display: none;
 }
@@ -68,4 +72,16 @@ nav a {
   box-shadow: 5px 30px #29fd53, -15px 68px #29fd53, 15px 15px #222327,
     10px 45px #222327;
   transition: 0.5s;
+}
+
+#indicator.change::after {
+  right: -20px;
+  box-shadow: 10px 30px #29fd53, -5px 60px #2fd453, -10px 15px #222327,
+    -20px 45px #222327;
+}
+
+#indicator.change::after {
+  right: -20px;
+  box-shadow: 10px 30px #29fd53, 20px 60px #29fd53, 15px 15px #222327,
+    25px 45px #222327;
 }
