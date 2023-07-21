@@ -30,17 +30,18 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 30px;
   transition: 0.5s;
 }
 
 #indicator {
   position: absolute;
-  right: 0;
   height: 75px;
   width: 100%;
   background: #29fd53;
   z-index: 3;
   transition: 0.5s;
+  display: none;
 }
 
 #indicator::before {
@@ -53,4 +54,18 @@ nav a {
   border-radius: 15px;
   box-shadow: 15px 30px #29fd53, 5px 60px #29fd53, -15px 15px #222327,
     -10px 45px #222327;
+  transition: 0.5s;
+}
+
+#indicator::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  width: 50px;
+  height: 15px;
+  background: #29fd53;
+  border-radius: 15px;
+  box-shadow: 5px 30px #29fd53, -15px 68px #29fd53, 15px 15px #222327,
+    10px 45px #222327;
+  transition: 0.5s;
 }
